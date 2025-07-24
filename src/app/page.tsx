@@ -1,19 +1,21 @@
-import { HeroSection } from "@/components/heroselection.tsx";
-import { AboutSection } from "@/components/aboutsection.tsx";
-import { KeyAchievementsSection } from "@/components/keyachievementsection.tsx";
-import { ExperienceSection } from "@/components/experiencesection.tsx";
-import { EducationSection } from "@/components/educationsection.tsx";
-import { SkillsSection } from "@/components/skilsssection.tsx";
+import { HeroSection } from "@/components/heroselection";
+import { AboutSection } from "@/components/aboutsection";
+import { KeyAchievementsSection } from "@/components/keyachievementsection";
+import { ExperienceSection } from "@/components/experiencesection";
+import { SkillsSection } from "@/components/skilsssection"; 
+import { BackgroundBubbles } from "@/components/background-bubbles";
 
 export default function Home() {
   return (
-    <main>
-      <HeroSection />
-      <AboutSection />
-      <KeyAchievementsSection />
-      <ExperienceSection />
-      <EducationSection />
-      <SkillsSection />
-    </main>
+    <div className="relative">
+      <BackgroundBubbles />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <KeyAchievementsSection />
+        <ExperienceSection />
+        <SkillsSection />
+      </main>
+    </div>
   );
 }

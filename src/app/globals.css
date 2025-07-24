@@ -4,7 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* This section is correct */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -69,7 +68,6 @@
   }
 
   .dark {
-    /* Nueva Paleta Oscura */
     --background: 222 47% 11%;
     --foreground: 210 40% 98%;
     --card: 222 47% 14%;
@@ -90,9 +88,7 @@
     --input: 217 33% 22%;
     --ring: 212 72% 51%;
   }
-} /* <--- THIS CLOSING BRACE WAS MISSING */
-
-@layer base {
+  
   * {
     @apply border-border outline-ring/50;
   }

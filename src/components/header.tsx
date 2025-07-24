@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { ThemeSwitcher } from "./theme-switcher";
 
 export function Header() {
   return (
@@ -15,6 +16,7 @@ export function Header() {
             Contactame
           </Link>
         </Button>
+        <ThemeSwitcher />
       </nav>
     </header>
   );

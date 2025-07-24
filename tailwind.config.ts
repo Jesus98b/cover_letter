@@ -20,7 +20,7 @@ const config = {
     extend: {
       colors: {
         border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
+        input: "hsl(var(--input))", // Corregido de 'incott' a 'input'
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -72,7 +72,7 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      // THIS IS THE FIX FOR THE SVG
+      // Esto es para el SVG y está correcto
       fill: ({ theme }) => ({
         primary: theme('colors.primary.DEFAULT'),
       }),
