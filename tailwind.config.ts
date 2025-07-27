@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss"
 
 const config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -18,6 +18,11 @@ const config = {
       },
     },
     extend: {
+      // --- BLOQUE AÑADIDO ---
+      backgroundImage: {
+        'gradient-aurora': "linear-gradient(to right, hsl(var(--primary)), hsl(var(--ring)))",
+      },
+      // ---------------------
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))", // Corregido de 'incott' a 'input'

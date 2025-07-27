@@ -45,7 +45,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 120 40% 90%; /* Verde claro para el tema de día */
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -68,7 +68,7 @@
   }
 
   .dark {
-    --background: 222 47% 11%;
+    --background: 222 47% 5%; /* Fondo oscuro para dark mode */
     --foreground: 210 40% 98%;
     --card: 222 47% 14%;
     --card-foreground: 210 40% 98%;
@@ -92,7 +92,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground;
+    color: hsl(var(--foreground));
+    background-color: hsl(120 40% 90%); /* Aplicación directa del verde claro */
+    transition: background-color 0.3s ease;
+  }
+
+  .dark body {
+    background-color: hsl(var(--background)); /* Aplicación del fondo oscuro para dark mode */
   }
 }

@@ -8,7 +8,7 @@ export function HeroIllustration() {
     <motion.div
       // This creates a subtle, looping "float" animation
       animate={{
-        y: [0, -10, 0], // Moves up 10px and back down
+        y: [0, -15, 0], // Moves up 15px and back down
       }}
       transition={{
         duration: 5,      // The animation takes 5 seconds

@@ -1,6 +1,6 @@
 "use client";
 
-import { HeroIllustration } from "./heroillustration.tsx";
+import { HeroIllustration } from "./heroillustration";
 import { TypeAnimation } from "react-type-animation";
 
 export function HeroSection() {
@@ -9,7 +9,8 @@ export function HeroSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Columna de Texto */}
         <div className="text-center md:text-left">
-          <h1 className="text-5xl font-bold tracking-tight lg:text-7xl">
+          {/* AÑADIMOS LA CLASE "text-primary" AQUÍ */}
+          <h1 className="text-5xl font-bold tracking-tight lg:text-7xl text-primary">
             Jesús Alfredo Valencia Bedoya
           </h1>
           <TypeAnimation

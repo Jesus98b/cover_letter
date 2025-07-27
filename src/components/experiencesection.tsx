@@ -1,4 +1,4 @@
-import { ExperienceCard } from "@/components/experiencecard.tsx";
+import { ExperienceCard } from "@/components/experiencecard";
 
 // Array completo con las 5 experiencias que definiste
 const experiences = [

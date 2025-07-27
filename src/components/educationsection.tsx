@@ -1,4 +1,4 @@
-import { EducationCard } from "@/components/educationcard.tsx";
+import { EducationCard } from "@/components/educationcard";
 
 const educationHistory = [
   {
