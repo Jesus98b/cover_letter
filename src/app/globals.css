@@ -45,48 +45,48 @@
 
 @layer base {
   :root {
-    --background: 120 40% 90%; /* Verde claro para el tema de día */
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --background: 40 20% 96%; /* Creamy Beige #F8F5F0 */
+    --foreground: 0 0% 17%; /* Deep Slate Grey #2B2B2B */
+    --card: 0 0% 100%; /* White for light mode cards */
+    --card-foreground: 0 0% 17%; /* Deep Slate Grey for card text */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --popover-foreground: 0 0% 17%;
+    --primary: 260 50% 65%; /* Digital Orchid #9A7FD1 */
+    --primary-foreground: 0 0% 100%; /* White for primary text */
+    --secondary: 210 70% 60%; /* Ethereal Blue */
+    --secondary-foreground: 0 0% 100%; /* White */
+    --muted: 40 20% 96%; /* Creamy Beige */
+    --muted-foreground: 0 0% 17%; /* Deep Slate Grey */
+    --accent: 260 50% 65%; /* Digital Orchid */
+    --accent-foreground: 0 0% 100%; /* White */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 70% 60%; /* Ethereal Blue for card borders */
+    --input: 40 20% 96%; /* Creamy Beige */
+    --ring: 260 50% 65%; /* Digital Orchid */
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222 47% 5%; /* Fondo oscuro para dark mode */
-    --foreground: 210 40% 98%;
-    --card: 222 47% 14%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 196 95% 55%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 217 33% 17%;
-    --accent-foreground: 210 40% 98%;
+    --background: 0 0% 11%; /* Charcoal Grey #1C1C1C */
+    --foreground: 25 45% 58%; /* Mocha Mousse #C48E6A */
+    --card: 0 0% 11%; /* Charcoal Grey for dark mode cards */
+    --card-foreground: 25 45% 58%; /* Mocha Mousse for card text */
+    --popover: 0 0% 11%;
+    --popover-foreground: 25 45% 58%;
+    --primary: 35 77% 56%; /* Warm Mustard #E6A23C */
+    --primary-foreground: 0 0% 11%; /* Charcoal Grey for primary text */
+    --secondary: 0 0% 11%; /* Charcoal Grey */
+    --secondary-foreground: 25 45% 58%; /* Mocha Mousse */
+    --muted: 0 0% 11%; /* Charcoal Grey */
+    --muted-foreground: 25 45% 58%; /* Mocha Mousse */
+    --accent: 35 77% 56%; /* Warm Mustard */
+    --accent-foreground: 0 0% 11%; /* Charcoal Grey */
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 22%;
-    --input: 217 33% 22%;
-    --ring: 212 72% 51%;
+    --border: 35 77% 56%; /* Warm Mustard for card borders */
+    --input: 0 0% 11%; /* Charcoal Grey */
+    --ring: 35 77% 56%; /* Warm Mustard */
   }
   
   * {
@@ -95,11 +95,120 @@
 
   body {
     color: hsl(var(--foreground));
-    background-color: hsl(120 40% 90%); /* Aplicación directa del verde claro */
-    transition: background-color 0.3s ease;
+    background: linear-gradient(135deg, #F8F5F0 20%, #E8E0D5 40%, #4A90E2 60%, #9A7FD1 80%, #F8F5F0 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: -1;
   }
 
   .dark body {
-    background-color: hsl(var(--background)); /* Aplicación del fondo oscuro para dark mode */
+    background: linear-gradient(135deg, #1C1C1C 20%, #2A2A2A 40%, #C48E6A 60%, #E6A23C 80%, #1C1C1C 100%);
+    background-attachment: fixed;
+  }
+
+  .dark body::before {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+
+  /* Card styling */
+  .card {
+    background-color: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    border: 2px solid hsl(var(--border));
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .dark .card {
+    border: 2px solid hsl(var(--border));
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Button styling */
+  .btn-primary {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(154, 127, 209, 0.3);
+  }
+
+  .dark .btn-primary:hover {
+    box-shadow: 0 4px 8px rgba(230, 162, 60, 0.3);
+  }
+
+  /* Link hover effects */
+  a {
+    color: hsl(var(--primary));
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #8B6BC0; /* Darker Digital Orchid */
+  }
+
+  .dark a:hover {
+    color: #F4B942; /* Lighter Warm Mustard */
+  }
+
+  /* Text hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--foreground));
+    font-weight: bold;
+  }
+
+  /* Special styling for main titles and subheadings */
+  h1, h2 {
+    color: #4A90E2; /* Ethereal Blue for main titles in light mode */
+  }
+
+  .dark h1, .dark h2 {
+    color: #C48E6A; /* Mocha Mousse for dark mode titles */
+  }
+
+  /* Body text styling */
+  p, span, div {
+    color: hsl(var(--foreground));
+  }
+
+  /* Theme transition improvements */
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Theme switcher styling */
+  .theme-switcher {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border: 2px solid hsl(var(--border));
+  }
+
+  .theme-switcher:hover {
+    background-color: hsl(var(--accent));
+    transform: scale(1.05);
   }
 }
