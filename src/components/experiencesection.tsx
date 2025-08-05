@@ -1,65 +1,70 @@
-import { ExperienceCard } from "@/components/experiencecard";
+"use client";
 
-// Array completo con las 5 experiencias que definiste
-const experiences = [
-  {
-    role: "Junior Project Manager",
-    company: "Brooklyn Fitboxing International",
-    dates: "Oct 2024 – Present | Madrid, Spain",
-    descriptionPoints: [
-      "Led strategic digital transformation initiatives across 5 European markets, reducing franchise opening time by 55% (9 to 4 months).",
-      "Built automation systems with n8n, ASANA, and Python to eliminate bottlenecks and accelerate execution.",
-      "Migrated Salesforce and legacy data to Business Central, improving cross-team collaboration.",
-      "Developed Power BI executive dashboards for real-time KPIs and risk visibility.",
-    ],
-  },
-  {
-    role: "Regional Project Lead – Caribbean Markets",
-    company: "Belcorp",
-    dates: "Mar 2023 – Aug 2024 | Lima, Peru",
-    descriptionPoints: [
-      "Delivered +15% YoY growth by managing 18 commercial campaigns annually.",
-      "Designed Tableau dashboards for real-time commercial KPI tracking.",
-      "Piloted digital initiatives (live video commerce, gamification) to boost consumer engagement.",
-      "Streamlined campaign workflows through automation and cross-functional coordination.",
-    ],
-  },
-  {
-    role: "Strategic Planning & Procurement Analyst – Chile Region",
-    company: "Belcorp",
-    dates: "Jan 2022 – Mar 2023 | Lima, Peru",
-    descriptionPoints: [
-      "Led procurement planning for 12 markets, optimizing budgets and reducing FOB costs.",
-      "Presented annual procurement strategy to C-level executives, aligning with demand forecasts.",
-      "Deployed Tableau dashboards for automated planning and performance tracking.",
-    ],
-  },
-  {
-    role: "Planning & Merchandising Analyst – Guatemala",
-    company: "Belcorp",
-    dates: "Jan 2021 – Jan 2022 | Lima, Peru",
-    descriptionPoints: [
-      "Reduced out-of-stock rates by 25% through demand forecasting improvements.",
-      "Launched digital campaigns aligned with regional consumer trends.",
-      "Validated pricing and merchandising assets for compliance with global standards.",
-    ],
-  },
-  {
-    role: "Planning & Merchandising Intern",
-    company: "Belcorp",
-    dates: "Jan 2020 – Jan 2021 | Lima, Peru",
-    descriptionPoints: [
-      "Created weekly performance trackers for senior management decision-making.",
-      "Validated marketing materials across multiple LATAM countries.",
-      "Consolidated data and trends for executive presentations.",
-    ],
-  },
-];
+import { ExperienceCard } from "@/components/experiencecard";
+import { useTranslation } from "@/lib/use-translation";
 
 export function ExperienceSection() {
+  const { t } = useTranslation();
+  
+  // Array completo con las 5 experiencias que definiste
+  const experiences = [
+    {
+      role: t('juniorProjectManager'),
+      company: t('brooklynFitboxing'),
+      dates: `${t('oct2024Present')} | ${t('madridSpain')}`,
+      descriptionPoints: [
+        t('exp1Point1'),
+        t('exp1Point2'),
+        t('exp1Point3'),
+        t('exp1Point4'),
+      ],
+    },
+    {
+      role: t('regionalProjectLead'),
+      company: t('belcorp'),
+      dates: `${t('mar2023Aug2024')} | ${t('limaPeru')}`,
+      descriptionPoints: [
+        t('exp2Point1'),
+        t('exp2Point2'),
+        t('exp2Point3'),
+        t('exp2Point4'),
+      ],
+    },
+    {
+      role: t('strategicPlanningAnalyst'),
+      company: t('belcorp'),
+      dates: `${t('jan2022Mar2023')} | ${t('limaPeru')}`,
+      descriptionPoints: [
+        t('exp3Point1'),
+        t('exp3Point2'),
+        t('exp3Point3'),
+      ],
+    },
+    {
+      role: t('planningMerchandisingAnalyst'),
+      company: t('belcorp'),
+      dates: `${t('jan2021Jan2022')} | ${t('limaPeru')}`,
+      descriptionPoints: [
+        t('exp4Point1'),
+        t('exp4Point2'),
+        t('exp4Point3'),
+      ],
+    },
+    {
+      role: t('planningMerchandisingIntern'),
+      company: t('belcorp'),
+      dates: `${t('jan2020Jan2021')} | ${t('limaPeru')}`,
+      descriptionPoints: [
+        t('exp5Point1'),
+        t('exp5Point2'),
+        t('exp5Point3'),
+      ],
+    },
+  ];
+
   return (
     <section className="container mx-auto py-24 px-4">
-      <h2 className="text-3xl font-bold text-center mb-12">Work Experience</h2>
+      <h2 className="text-3xl font-bold text-center mb-12">{t('experienceTitle')}</h2>
       <div className="max-w-4xl mx-auto flex flex-col gap-8">
         {experiences.map((exp, index) => (
           <ExperienceCard 

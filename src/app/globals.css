@@ -65,21 +65,25 @@
     --input: 40 20% 96%; /* Creamy Beige */
     --ring: 260 50% 65%; /* Digital Orchid */
     --radius: 0.5rem;
+    /* Additional contrast variables */
+    --heading-light: 210 70% 45%; /* Darker Ethereal Blue for better contrast */
+    --text-light: 0 0% 17%; /* Deep Slate Grey #2B2B2B */
+    --text-shadow-light: rgba(0, 0, 0, 0.1);
   }
 
   .dark {
     --background: 0 0% 11%; /* Charcoal Grey #1C1C1C */
-    --foreground: 25 45% 58%; /* Mocha Mousse #C48E6A */
+    --foreground: 40 20% 96%; /* Creamy Beige #F8F5F0 for better contrast */
     --card: 0 0% 11%; /* Charcoal Grey for dark mode cards */
-    --card-foreground: 25 45% 58%; /* Mocha Mousse for card text */
+    --card-foreground: 40 20% 96%; /* Creamy Beige for card text */
     --popover: 0 0% 11%;
-    --popover-foreground: 25 45% 58%;
+    --popover-foreground: 40 20% 96%;
     --primary: 35 77% 56%; /* Warm Mustard #E6A23C */
     --primary-foreground: 0 0% 11%; /* Charcoal Grey for primary text */
     --secondary: 0 0% 11%; /* Charcoal Grey */
-    --secondary-foreground: 25 45% 58%; /* Mocha Mousse */
+    --secondary-foreground: 40 20% 96%; /* Creamy Beige */
     --muted: 0 0% 11%; /* Charcoal Grey */
-    --muted-foreground: 25 45% 58%; /* Mocha Mousse */
+    --muted-foreground: 40 20% 96%; /* Creamy Beige */
     --accent: 35 77% 56%; /* Warm Mustard */
     --accent-foreground: 0 0% 11%; /* Charcoal Grey */
     --destructive: 0 63% 31%;
@@ -87,6 +91,10 @@
     --border: 35 77% 56%; /* Warm Mustard for card borders */
     --input: 0 0% 11%; /* Charcoal Grey */
     --ring: 35 77% 56%; /* Warm Mustard */
+    /* Additional contrast variables for dark mode */
+    --heading-dark: 25 45% 70%; /* Lighter Mocha Mousse for better contrast */
+    --text-dark: 40 20% 96%; /* Creamy Beige #F8F5F0 */
+    --text-shadow-dark: rgba(0, 0, 0, 0.3);
   }
   
   * {
@@ -100,6 +108,7 @@
     min-height: 100vh;
     transition: all 0.3s ease;
     position: relative;
+    z-index: 1;
   }
 
   body::before {
@@ -112,7 +121,7 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    z-index: -1;
+    z-index: 0;
   }
 
   .dark body {
@@ -126,21 +135,25 @@
     -webkit-backdrop-filter: blur(15px);
   }
 
-  /* Card styling */
+  /* Card styling with improved contrast */
   .card {
     background-color: hsl(var(--card));
     color: hsl(var(--card-foreground));
     border: 2px solid hsl(var(--border));
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
   }
 
   .dark .card {
     border: 2px solid hsl(var(--border));
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
   }
 
-  /* Button styling */
+  /* Button styling with improved contrast */
   .btn-primary {
     background-color: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
@@ -150,49 +163,75 @@
     font-weight: 600;
     transition: all 0.3s ease;
     cursor: pointer;
+    position: relative;
+    z-index: 25;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(154, 127, 209, 0.3);
+    box-shadow: 0 4px 8px rgba(154, 127, 209, 0.4);
+    background-color: #8B6BC0; /* Darker Digital Orchid for better contrast */
   }
 
   .dark .btn-primary:hover {
-    box-shadow: 0 4px 8px rgba(230, 162, 60, 0.3);
+    box-shadow: 0 4px 8px rgba(230, 162, 60, 0.4);
+    background-color: #F4B942; /* Lighter Warm Mustard for better contrast */
   }
 
-  /* Link hover effects */
+  /* Link hover effects with improved contrast */
   a {
     color: hsl(var(--primary));
     transition: color 0.3s ease;
+    position: relative;
+    z-index: 15;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   }
 
   a:hover {
     color: #8B6BC0; /* Darker Digital Orchid */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 
   .dark a:hover {
     color: #F4B942; /* Lighter Warm Mustard */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 
-  /* Text hierarchy */
+  /* Text hierarchy with improved contrast and shadows */
   h1, h2, h3, h4, h5, h6 {
-    color: hsl(var(--foreground));
+    color: hsl(var(--heading-light));
     font-weight: bold;
+    text-shadow: 0 1px 2px var(--text-shadow-light);
+    position: relative;
+    z-index: 20;
   }
 
   /* Special styling for main titles and subheadings */
   h1, h2 {
-    color: #4A90E2; /* Ethereal Blue for main titles in light mode */
+    color: hsl(var(--heading-light)); /* Darker Ethereal Blue for better contrast */
+    text-shadow: 0 2px 4px var(--text-shadow-light);
   }
 
   .dark h1, .dark h2 {
-    color: #C48E6A; /* Mocha Mousse for dark mode titles */
+    color: hsl(var(--heading-dark)); /* Lighter Mocha Mousse for better contrast */
+    text-shadow: 0 2px 4px var(--text-shadow-dark);
   }
 
-  /* Body text styling */
+  .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: hsl(var(--heading-dark));
+    text-shadow: 0 1px 2px var(--text-shadow-dark);
+  }
+
+  /* Body text styling with improved contrast */
   p, span, div {
-    color: hsl(var(--foreground));
+    color: hsl(var(--text-light));
+    position: relative;
+    z-index: 15;
+  }
+
+  .dark p, .dark span, .dark div {
+    color: hsl(var(--text-dark));
   }
 
   /* Theme transition improvements */
@@ -205,10 +244,58 @@
     background-color: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
     border: 2px solid hsl(var(--border));
+    position: relative;
+    z-index: 30;
   }
 
   .theme-switcher:hover {
     background-color: hsl(var(--accent));
     transform: scale(1.05);
+  }
+
+  /* Additional contrast improvements */
+  header, nav, main, section, article {
+    position: relative;
+    z-index: 5;
+  }
+
+  /* Ensure proper text contrast for all content */
+  .content-wrapper {
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Fallback colors for maximum readability */
+  .text-fallback-light {
+    color: #2B2B2B !important;
+  }
+
+  .text-fallback-dark {
+    color: #F8F5F0 !important;
+  }
+
+  /* Heart rain animation */
+  @keyframes heart-fall {
+    0% {
+      transform: translateY(-100vh) rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  .animate-heart-fall {
+    animation: heart-fall 3s ease-in-out forwards;
+  }
+
+  .heart-rain {
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
 }
