@@ -12,7 +12,7 @@ interface LocalizationContextType {
 const LocalizationContext = createContext<LocalizationContextType | undefined>(undefined);
 
 export function LocalizationProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('es');
+  const [language, setLanguageState] = useState<Language>('en');
 
   useEffect(() => {
     // Load language from localStorage on mount
