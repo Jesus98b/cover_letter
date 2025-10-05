@@ -55,15 +55,18 @@ export interface Dictionary {
   exp1Point2: string;
   exp1Point3: string;
   exp1Point4: string;
+  exp1Point5: string;
   
   exp2Point1: string;
   exp2Point2: string;
   exp2Point3: string;
   exp2Point4: string;
+  exp2Point5: string;
   
   exp3Point1: string;
   exp3Point2: string;
   exp3Point3: string;
+  exp3Point4: string;
   
   exp4Point1: string;
   exp4Point2: string;
@@ -166,19 +169,15 @@ export const dictionary: Record<'en' | 'es', Dictionary> = {
     technicalStack: "Technical Stack and Languages",
     
     // Job titles
-    juniorProjectManager: "Junior Project Manager",
-    regionalProjectLead: "Regional Project Lead – Caribbean Markets",
-    strategicPlanningAnalyst: "Strategic Planning & Procurement Analyst – Chile Region",
-    planningMerchandisingAnalyst: "Planning & Merchandising Analyst – Guatemala",
+    juniorProjectManager: "IT & Digital Transformation Project Manager",
+    regionalProjectLead: "Regional Project Lead, Caribbean Markets (Jewelry & Accessories)",
+    strategicPlanningAnalyst: "Strategic Planning & Procurement Analyst, Chile Region",
+    planningMerchandisingAnalyst: "Planning & Merchandising Analyst, Guatemala",
     planningMerchandisingIntern: "Planning & Merchandising Intern",
     
     // Companies
     brooklynFitboxing: "Brooklyn Fitboxing International",
     belcorp: "Belcorp",
-    
-    // Locations
-    madridSpain: "Madrid, Spain",
-    limaPeru: "Lima, Peru",
     
     // Time periods
     oct2024Present: "Oct 2024 – Present",
@@ -188,27 +187,30 @@ export const dictionary: Record<'en' | 'es', Dictionary> = {
     jan2020Jan2021: "Jan 2020 – Jan 2021",
     
     // Experience descriptions
-    exp1Point1: "Led strategic digital transformation initiatives across 5 European markets, reducing franchise opening time by 55% (9 to 4 months).",
-    exp1Point2: "Built automation systems with n8n, ASANA, and Python to eliminate bottlenecks and accelerate execution.",
-    exp1Point3: "Migrated Salesforce and legacy data to Business Central, improving cross-team collaboration.",
-    exp1Point4: "Developed Power BI executive dashboards for real-time KPIs and risk visibility.",
+    exp1Point1: "Led strategic digital transformation projects in 5 European markets, optimizing processes, automating workflows, and accelerating franchise network growth.",
+    exp1Point2: "Reduced franchise opening time from 9 to 4 months through automation and cross-functional coordination.",
+    exp1Point3: "Migrated data from Salesforce and legacy systems to Business Central, improving team collaboration.",
+    exp1Point4: "Developed automation systems with n8n, Asana, and Python to eliminate bottlenecks.",
+    exp1Point5: "Created Power BI dashboards for real-time KPI monitoring and risk assessment.",
     
-    exp2Point1: "Delivered +15% YoY growth by managing 18 commercial campaigns annually.",
-    exp2Point2: "Designed Tableau dashboards for real-time commercial KPI tracking.",
-    exp2Point3: "Piloted digital initiatives (live video commerce, gamification) to boost consumer engagement.",
-    exp2Point4: "Streamlined campaign workflows through automation and cross-functional coordination.",
+    exp2Point1: "Managed campaigns and digital projects in Dominican Republic and Puerto Rico for jewelry and accessories category, combining creativity and commercial strategy.",
+    exp2Point2: "Led 18 annual campaigns, achieving +15% YoY growth.",
+    exp2Point3: "Implemented digital initiatives such as live video commerce and gamification to increase customer engagement.",
+    exp2Point4: "Developed Tableau dashboards for real-time commercial KPI tracking.",
+    exp2Point5: "Optimized workflows and inventory coverage through cross-functional coordination.",
     
-    exp3Point1: "Led procurement planning for 12 markets, optimizing budgets and reducing FOB costs.",
-    exp3Point2: "Presented annual procurement strategy to C-level executives, aligning with demand forecasts.",
-    exp3Point3: "Deployed Tableau dashboards for automated planning and performance tracking.",
+    exp3Point1: "Planned and managed strategic procurement for 12 markets, with direct responsibility for Chile operations.",
+    exp3Point2: "Created a dynamic model for procurement budgets, improving accuracy and efficiency.",
+    exp3Point3: "Negotiated contracts and product redesign strategies to reduce FOB costs.",
+    exp3Point4: "Implemented Tableau dashboards for automated planning and tracking.",
     
-    exp4Point1: "Reduced out-of-stock rates by 25% through demand forecasting improvements.",
-    exp4Point2: "Launched digital campaigns aligned with regional consumer trends.",
-    exp4Point3: "Validated pricing and merchandising assets for compliance with global standards.",
+    exp4Point1: "Reduced out-of-stock by 25% through demand forecasting improvements.",
+    exp4Point2: "Designed digital campaigns aligned with regional trends.",
+    exp4Point3: "Validated materials and prices to ensure compliance with global standards.",
     
-    exp5Point1: "Created weekly performance trackers for senior management decision-making.",
-    exp5Point2: "Validated marketing materials across multiple LATAM countries.",
-    exp5Point3: "Consolidated data and trends for executive presentations.",
+    exp5Point1: "Validated marketing materials and prices across multiple LATAM markets.",
+    exp5Point2: "Consolidated data and trends for executive presentations.",
+    exp5Point3: "Created weekly reports to support decision-making.",
     
     // Education
     mscMarketStrategy: "MSc in Market Strategy & Consumer Behavior",
@@ -224,24 +226,24 @@ export const dictionary: Record<'en' | 'es', Dictionary> = {
     
     // Education dates
     sep2024Jul2025: "Sep 2024 – Jul 2025",
-    oct2024Jun2025: "Oct 2024 - Jun 2025",
+    oct2024Jun2025: "Oct 2024 - Sep 2025",
     jul2022Dec2022: "Jul 2022 – Dec 2022",
     jan2022May2022: "Jan 2022 – May 2022",
     jan2016Jul2020: "Jan 2016 – Jul 2020",
     
     // Achievements
     productStrategy: "Product Strategy",
-    productStrategyDesc: "Guided product strategy and execution in dynamic environments, aligning business needs with scalable tech solutions.",
+    productStrategyDesc: "Guided product strategy, defining strategic roadmaps and prioritizing backlogs to align with business needs and ensure timely, dependency-free feature releases.",
     projectLeadership: "Project Leadership",
-    projectLeadershipDesc: "Led complex project lifecycles across marketing, operations, and IT, improving time to market and ensuring measurable impact.",
+    projectLeadershipDesc: "Led complex, cross-functional projects across diverse areas—from IT and operations to marketing and legal—in Europe and Latin America. Optimized workflows to improve time to market and deliver measurable business impact.",
     techCollaboration: "Tech Collaboration",
-    techCollaborationDesc: "Collaborated closely with developers and technical stakeholders, leveraging foundational knowledge in computer science to align business needs with technical solutions.",
+    techCollaborationDesc: "Collaborated closely with developers and technical stakeholders, leveraging foundational knowledge in computer science to translate business needs into scalable technical solutions.",
     apiIntegration: "API Integration",
-    apiIntegrationDesc: "Built and integrated APIs to automate key processes and improve data flow between platforms, reducing manual intervention and enabling real time visibility.",
+    apiIntegrationDesc: "Built and integrated APIs to automated data flow between platforms like Salesforce and Business Central, reducing manual intervention and enabling real-time visibility.",
     automationSystems: "Automation Systems",
-    automationSystemsDesc: "Designed and implemented end-to-end digital workflows and automation systems using Asana, n8n, and Python, resolving dependencies and boosting team efficiency.",
+    automationSystemsDesc: "Designed and implemented end-to-end digital workflows and automation systems using Python, n8n, and Asana, which reduced manual work and boosted team efficiency.",
     dataAnalytics: "Data Analytics",
-    dataAnalyticsDesc: "Created and deployed advanced analytics dashboards (Power BI, Tableau), enhancing decision making and ensuring data governance.",
+    dataAnalyticsDesc: "Created and deployed advanced dashboards in Power BI and Tableau to provide real-time insights for senior management, enhancing data-driven decision-making and performance tracking.",
     
     // Skills
     python: "Python",
@@ -301,11 +303,11 @@ export const dictionary: Record<'en' | 'es', Dictionary> = {
     technicalStack: "Stack Técnico y Lenguajes",
     
     // Job titles
-    juniorProjectManager: "Project Manager Junior",
-    regionalProjectLead: "Líder de Proyectos Regionales – Mercados del Caribe",
-    strategicPlanningAnalyst: "Analista de Planificación Estratégica y Compras – Región Chile",
-    planningMerchandisingAnalyst: "Analista de Planificación y Merchandising – Guatemala",
-    planningMerchandisingIntern: "Pasante de Planificación y Merchandising",
+    juniorProjectManager: "IT & Digital Transformation Project Manager",
+    regionalProjectLead: "Regional Project Lead, Caribbean Markets (Jewelry & Accessories)",
+    strategicPlanningAnalyst: "Strategic Planning & Procurement Analyst, Chile Region",
+    planningMerchandisingAnalyst: "Planning & Merchandising Analyst, Guatemala",
+    planningMerchandisingIntern: "Planning & Merchandising Intern",
     
     // Companies
     brooklynFitboxing: "Brooklyn Fitboxing International",
@@ -322,28 +324,31 @@ export const dictionary: Record<'en' | 'es', Dictionary> = {
     jan2021Jan2022: "Ene 2021 – Ene 2022",
     jan2020Jan2021: "Ene 2020 – Ene 2021",
     
-    // Experience descriptions
-    exp1Point1: "Lideré iniciativas estratégicas de transformación digital en 5 mercados europeos, reduciendo el tiempo de apertura de franquicias en un 55% (de 9 a 4 meses).",
-    exp1Point2: "Construí sistemas de automatización con n8n, ASANA y Python para eliminar cuellos de botella y acelerar la ejecución.",
-    exp1Point3: "Migré datos de Salesforce y sistemas legacy a Business Central, mejorando la colaboración entre equipos.",
-    exp1Point4: "Desarrollé dashboards ejecutivos en Power BI para KPIs en tiempo real y visibilidad de riesgos.",
+    // Experience descriptions - EXACT TEXT PROVIDED BY USER
+    exp1Point1: "Lidero proyectos estratégicos de transformación digital en 5 mercados europeos, optimizando procesos, automatizando flujos y acelerando el crecimiento de la red de franquicias.",
+    exp1Point2: "Reduje el tiempo de apertura de franquicias de 9 a 4 meses mediante automatización y coordinación multifuncional.",
+    exp1Point3: "Migré datos de Salesforce y sistemas heredados a Business Central, mejorando la colaboración entre equipos.",
+    exp1Point4: "Desarrollé sistemas de automatización con n8n, Asana y Python para eliminar cuellos de botella.",
+    exp1Point5: "Creé dashboards en Power BI para monitoreo en tiempo real de KPIs y riesgos.",
     
-    exp2Point1: "Logré un crecimiento del +15% interanual gestionando 18 campañas comerciales anuales.",
-    exp2Point2: "Diseñé dashboards en Tableau para seguimiento de KPIs comerciales en tiempo real.",
-    exp2Point3: "Piloté iniciativas digitales (comercio por video en vivo, gamificación) para impulsar el engagement del consumidor.",
-    exp2Point4: "Optimicé flujos de trabajo de campañas a través de automatización y coordinación multifuncional.",
+    exp2Point1: "Gestioné campañas y proyectos digitales en República Dominicana y Puerto Rico para la categoría de joyería y accesorios, combinando creatividad y estrategia comercial.",
+    exp2Point2: "Dirigí 18 campañas anuales, logrando un crecimiento de +15% YoY.",
+    exp2Point3: "Implementé iniciativas digitales como live video commerce y gamificación para aumentar la interacción del cliente.",
+    exp2Point4: "Desarrollé dashboards en Tableau para seguimiento en tiempo real de KPIs comerciales.",
+    exp2Point5: "Optimicé flujos de trabajo y cobertura de inventario a través de coordinación multifuncional.",
     
-    exp3Point1: "Lideré la planificación de compras para 12 mercados, optimizando presupuestos y reduciendo costos FOB.",
-    exp3Point2: "Presenté la estrategia anual de compras a ejecutivos C-level, alineándola con pronósticos de demanda.",
-    exp3Point3: "Implementé dashboards en Tableau para planificación automatizada y seguimiento de rendimiento.",
+    exp3Point1: "Planifiqué y gestioné compras estratégicas para 12 mercados, con responsabilidad directa sobre la operación en Chile.",
+    exp3Point2: "Creé un modelo dinámico para presupuestos de compra, mejorando la precisión y eficiencia.",
+    exp3Point3: "Negocié contratos y estrategias de rediseño de productos para reducir costos FOB.",
+    exp3Point4: "Implementé dashboards en Tableau para planificación y seguimiento automatizado.",
     
-    exp4Point1: "Reduje las tasas de agotamiento de stock en un 25% mediante mejoras en el pronóstico de demanda.",
-    exp4Point2: "Lancé campañas digitales alineadas con tendencias de consumo regionales.",
-    exp4Point3: "Validé precios y activos de merchandising para cumplimiento con estándares globales.",
+    exp4Point1: "Reduje el out-of-stock en un 25% mediante mejoras en el pronóstico de demanda.",
+    exp4Point2: "Diseñé campañas digitales alineadas con tendencias regionales.",
+    exp4Point3: "Validé materiales y precios para garantizar cumplimiento con estándares globales.",
     
-    exp5Point1: "Creé trackers semanales de rendimiento para la toma de decisiones de la alta gerencia.",
-    exp5Point2: "Validé materiales de marketing en múltiples países de LATAM.",
-    exp5Point3: "Consolidé datos y tendencias para presentaciones ejecutivas.",
+    exp5Point1: "Validé materiales de marketing y precios en múltiples mercados LATAM.",
+    exp5Point2: "Consolidé datos y tendencias para presentaciones ejecutivas.",
+    exp5Point3: "Creé reportes semanales para soporte en toma de decisiones.",
     
     // Education
     mscMarketStrategy: "MSc en Estrategia de Mercado y Comportamiento del Consumidor",
@@ -359,24 +364,25 @@ export const dictionary: Record<'en' | 'es', Dictionary> = {
     
     // Education dates
     sep2024Jul2025: "Sep 2024 – Jul 2025",
-    oct2024Jun2025: "Oct 2024 - Jun 2025",
+    oct2024Jun2025: "Oct 2024 - Sep 2025",
     jul2022Dec2022: "Jul 2022 – Dic 2022",
     jan2022May2022: "Ene 2022 – May 2022",
     jan2016Jul2020: "Ene 2016 – Jul 2020",
     
     // Achievements
     productStrategy: "Estrategia de Producto",
-    productStrategyDesc: "Guié la estrategia y ejecución de productos en entornos dinámicos, alineando necesidades empresariales con soluciones técnicas escalables.",
+    productStrategyDesc: "Guié la estrategia de producto, definiendo el roadmap estrategico y priorizando backlogs para alinear las necesidades del negocio y asegurar lanzamientos de funcionales a tiempo.",
     projectLeadership: "Liderazgo de Proyectos",
-    projectLeadershipDesc: "Lideré ciclos de vida complejos de proyectos en marketing, operaciones y TI, mejorando el time to market y asegurando impacto medible.",
+    projectLeadershipDesc: "He liderado proyectos complejos y multifuncionales en diversas áreas, desde TI y operaciones hasta marketing y legal, en Europa y América Latina. Optimicé flujos de trabajo para mejorar el tiempo de salida al mercado y generar un impacto medible.",
     techCollaboration: "Colaboración Técnica",
-    techCollaborationDesc: "Colaboré estrechamente con desarrolladores y stakeholders técnicos, aprovechando conocimientos fundamentales en informática para alinear necesidades empresariales con soluciones técnicas.",
+    techCollaborationDesc: "Colaboré estrechamente con desarrolladores y stakeholders técnicos, aprovechando conocimientos fundamentales en informática para traducir las necesidades del negocio en soluciones técnicas escalables.",
     apiIntegration: "Integración de APIs",
-    apiIntegrationDesc: "Construí e integré APIs para automatizar procesos clave y mejorar el flujo de datos entre plataformas, reduciendo intervención manual y habilitando visibilidad en tiempo real.",
+    apiIntegrationDesc: "Construí e integré APIs y flujos de datos automatizados entre plataformas como Salesforce y Business Central, reduciendo la intervención manual y habilitando visibilidad en tiempo real.",
     automationSystems: "Sistemas de Automatización",
-    automationSystemsDesc: "Diseñé e implementé flujos de trabajo digitales end-to-end y sistemas de automatización usando Asana, n8n y Python, resolviendo dependencias y potenciando la eficiencia del equipo.",
+    automationSystemsDesc: "Diseñé e implementé flujos de trabajo digitales de principio a fin y sistemas de automatización utilizando Python, n8n y Asana, lo que redujo el trabajo manual y aumentó la eficiencia del equipo.",
     dataAnalytics: "Análisis de Datos",
-    dataAnalyticsDesc: "Creé e implementé dashboards avanzados de analytics (Power BI, Tableau), mejorando la toma de decisiones y asegurando gobernanza de datos.",
+    dataAnalyticsDesc: "Creé e implementé dashboards avanzados en Power BI y Tableau para proporcionar información en tiempo real a la alta dirección, mejorando la toma de decisiones basada en datos y el seguimiento del rendimiento.",
+
     
     // Skills
     python: "Python",
