@@ -2,6 +2,7 @@
 
 import { useTranslation } from "@/lib/use-translation";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 export function AboutSection() {
     const { t } = useTranslation();
@@ -17,10 +18,13 @@ export function AboutSection() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
               {/* Photo Space - Left Column */}
               <div className="lg:col-span-1 flex justify-center">
-                <img 
+                <Image 
                   src="/Jesus valencia-cover letter.jpeg" 
                   alt="Jesús Valencia" 
+                  width={224}
+                  height={288}
                   className="w-56 h-72 object-cover rounded-lg shadow-md"
+                  priority
                 />
               </div>
               

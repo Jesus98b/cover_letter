@@ -270,6 +270,10 @@ export const dictionary: Record<'en' | 'es', Dictionary> = {
     by: "by Jesús Valencia",
     language: "Language:",
     theme: "Theme:",
+    
+    // Locations
+    madridSpain: "Madrid, Spain",
+    limaPeru: "Lima, Peru",
   },
   es: {
     // Header
